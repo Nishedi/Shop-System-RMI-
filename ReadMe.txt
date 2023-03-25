@@ -1,5 +1,6 @@
 
 Konrad Pempera
+LINK DO PREZENTACJI YOUTUBE https://youtu.be/E_LkxS8eCSw
 Celem projektu było oprogarowanie aplikacji obługujacej zamówienia
 Aplikacja składa się z trzech podaplikacji (klient, serwer(repozytorium), pracownik(sprzedawca, zarządca)
 Klient może: przeglądać zamówienia, składać zamówienie, edytować je, miec podgląd do ich statusu oraz zasubsykrybować tzn zdecydować czy chce automatycznie dostawać powiadomienia odnośnie zmiany stanu zamówienia
@@ -15,7 +16,8 @@ Aplikacja została skompilowana w jdk 11 komendą javac -p gadgets.jar -encoding
 Plik jar został stworzony za pomocą komendy jar -cfv lab07_pop.jar -C bin . src
 Aplikacja polega na innym pliku typu jar, który musi być uwzględniony przy kompilacji oraz uruchamianiu, do kompilacji słuzy flaga -p gadgets.jar
 W celu uruchomienia aplikacji z zależnością należy na początku uruchomić komendę set CLASSPATH=gadgets.jar nastepnie
-java -p gadgets.jar;lab07_pop.jar -m lab07.pop/servermain.Server dla serwera
-java -p gadgets.jar;lab07_pop.jar -m lab07.pop/clientmain.Client host port dla klienta
-java -p gadgets.jar;lab07_pop.jar -m lab07.pop/sellermain.Seller host port dla sprzedawcy
-W celu uruchomienia aplikacji na odpowiednim porcie i hoscie nalezy wpisać odpowiednie wartości w pola host i port przy wywołaniu
+java -p gadgets.jar;Shop_system.jar -m lab07.pop/servermain.Server dla serwera
+java -p gadgets.jar;Shop_system.jar -m lab07.pop/clientmain.Client host port dla klienta
+java -p gadgets.jar;Shop_system.jar -m lab07.pop/sellermain.Seller host port dla sprzedawcy
+W celu uruchomienia aplikacji na odpowiednim porcie i hoscie nalezy wpisać odpowiednie wartości w pola host i port przy wywołaniu, w przypadku nie podania tych wartości aplikacja zostanie uruchomiona na domyślny porcie i hoscie.
+Ze względu na implementacje security managera, aplikacje należy uruchamiać w JDK 11.
